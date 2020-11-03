@@ -1,17 +1,19 @@
 
-function updateProduct(name,details, price , img ,category){
-
-    
+const updateProduct = (name,details, price , img ,category)=> {
     let productAfterUpdate ={
-        newname : name,
+        newName : name,
         newDetails:details,
         newPrice :price,
         newImg :img,
         newCategory :category,
     };
-    
     return productAfterUpdate;
-
 }
 
-module.exports =updateProduct;
+const addItems = (arr, item) => {
+    let newArr = [...arr, item] ;
+    return newArr;
+};
+
+
+module.exports ={addItems ,updateProduct} ;
