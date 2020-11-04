@@ -41,6 +41,5 @@ describe('Testing search by name', () => {
         const actual = searchByName([{ name: 'shirt', price: 100 }, { name: 'abs', price: 100 }, { name: 'shirt', price: 300 }], "shirt");
         const expected = [{ name: 'shirt', price: 100 }, { name: 'shirt', price: 300 }];
         expect(actual).toEqual(expected);
-        // expect(actual).toEqual(expected);
     });
 });
