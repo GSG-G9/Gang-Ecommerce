@@ -1,11 +1,11 @@
-const {  updateProduct, addItems, deleteItem } = require('../scripts/pure.js');
+const { updateProduct, addItems, deleteItem, searchByName } = require('../scripts/pure.js');
 
-describe('Testing delete item ', ()=>{
-    test('Should delete product and return new Array', ()=>{
-        const arr = [{productname: 'product1' , price :'120'} , {productname: 'product2' , price :'130'} , {productname: 'aproduct3' , price :'140'} ];
-        const item = {productname: 'aproduct3' , price :'140'};
+describe('Testing delete item ', () => {
+    test('Should delete product and return new Array', () => {
+        const arr = [{ productname: 'product1', price: '120' }, { productname: 'product2', price: '130' }, { productname: 'aproduct3', price: '140' }];
+        const item = { productname: 'aproduct3', price: '140' };
         const actual = deleteItem(arr, item);
-        const expected = [{productname: 'product1' , price :'120'} , {productname: 'product2' , price :'130'} ]
+        const expected = [{ productname: 'product1', price: '120' }, { productname: 'product2', price: '130' }]
         expect(actual).toEqual(expected);
     });
 });
@@ -31,5 +31,16 @@ describe('Testing add product items', () => {
         const actual = addItems(arr, item);
         const expected = [...arr, item];
         expect(actual).toEqual(expected);
+    });
+});
+
+
+describe('Testing search by name', () => {
+    test('Should return array when given an array and searched name', () => {
+
+        const actual = searchByName([{ name: 'shirt', price: 100 }, { name: 'abs', price: 100 }, { name: 'shirt', price: 300 }], "shirt");
+        const expected = [{ name: 'shirt', price: 100 }, { name: 'shirt', price: 300 }];
+        expect(actual).toEqual(expected);
+        // expect(actual).toEqual(expected);
     });
 });
