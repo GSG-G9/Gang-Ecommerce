@@ -1,0 +1,57 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+header {
+  width: 100%;
+  background-color: rgb(77 212 199);
+  color: rgb(43 47 49);
+  padding: 15px 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.linkshead a {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.imgsection {
+  width: 100%;
+}
+.imgsection img {
+  width: 100%;
+}
+.logo {
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+}
+.produc__container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.products {
+  margin: 5%;
+}
+.gird__view {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.list__view {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.searchdiv {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px;
+}
