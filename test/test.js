@@ -27,7 +27,7 @@ describe('Testing updating products ', () => {
 describe('Testing add product items', () => {
     test('Should return array with new item when given an array', () => {
         const arr = ['a', 'b', 'c'];
-        const item = 'd';
+        const item = {abc:'d'};
         const actual = addItems(arr, item);
         const expected = [...arr, item];
         expect(actual).toEqual(expected);

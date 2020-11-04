@@ -13,9 +13,10 @@
         <a href="index.html"><img src="" alt="Gang logo"></a> 
     </header>
     <main>
-        <label for="Search">Enter your product name</label>
-       <input class="search"  id="Search" type="search"  name="" value="">
-       <button class="Add_product" id="add-product">add product</button>  
+        <label for="Search">Add new product</label>
+       <a href="form.html">
+            <button class="Add_product" id="add-product">add product</button>  
+       </a>
         <div class="products">
             <div>
                 <img src="" alt="">
@@ -23,7 +24,8 @@
                 <span product_details></span> 
                 <p class="product-category"></p>
                 <p class="product_price"></p>   
-                <button class="delete_product">delete product</button>
+                <button id="delete_product" >delete product</button>
+                <input id="delete-item" type="text" >
                 <button class="edit_product">edit product</button>   
             </div>
         </div>
@@ -31,7 +33,7 @@
     <footer>
 
     </footer>
-    <script src="scripts/DOM.js"></script>
     <script src="scripts/pure.js"></script>
+    <script src="scripts/seller.js"></script>
 </body>
 </html>

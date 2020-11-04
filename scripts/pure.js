@@ -21,9 +21,9 @@ const updateProduct = (name, details, price, img, category) => {
 }
 
 const addItems = (arr, item) => {
-    let newArr = [...arr, item];
-    return newArr;
+    return [...arr, item];
+      
 };
 
 
-module.exports = { addItems, updateProduct, deleteItem };
+//module.exports = { addItems, updateProduct, deleteItem };
