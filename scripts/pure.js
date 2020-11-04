@@ -21,8 +21,8 @@ const updateProduct = (name, details, price, img, category) => {
 }
 
 const addItems = (arr, item) => {
-    let newArr = [...arr, item];
-    return newArr;
+    return [...arr, item];
+      
 };
 
 const searchByName = (array, name) => {
