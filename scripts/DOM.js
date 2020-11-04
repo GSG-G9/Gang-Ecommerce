@@ -1,4 +1,5 @@
 const cart = [];
+const producContainer = document.getElementById('produc__container');
 const allProduct = [{ image: "https://via.placeholder.com/300.png/09f/ff", name: "a", details: "100", category: "men", price: 100 }, { image: "https://via.placeholder.com/300.png/09f/ff", name: "a", details: "100", category: "men", price: 100 }, { image: "https://via.placeholder.com/300.png/09f/ff", name: "a", details: "100", category: "men", price: 100 }];
 const render = () => {
     allProduct.forEach((product) => {
@@ -29,20 +30,29 @@ const render = () => {
         addToCart.innerText = "Add to Cart";
         div.appendChild(addToCart);
 
-        document.body.appendChild(div);
+        producContainer.appendChild(div);
 
         addToCart.addEventListener('click', event => {
             const pro = { image: image.src, name: productName.innerText, details: productDetails.innerText, category: productCategory.innerText, price: productPrice.innerText }
             cart.push(pro);
 
         });
-
     });
-
-
 }
-
 render();
 
+const grid = document.getElementById('grid_view');
+const list = document.getElementById('list_view');
 
+grid.addEventListener('click' ,() =>{
+    producContainer.setAttribute("class", "gird__view");
+    div.style.width ="30%";
+    div.style.margin = "2%"
+});
+
+list.addEventListener('click' ,() =>{
+    producContainer.setAttribute("class", "list__view");
+    div.style.width ="97%";
+    div.style.margin = "2%"
+});
 
