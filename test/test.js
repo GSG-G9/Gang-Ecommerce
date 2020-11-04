@@ -1,5 +1,4 @@
-const {  updateProduct, addItems, deleteItem} = require('../scripts/pure.js');
-
+const {  updateProduct, addItems, deleteItem } = require('../scripts/pure.js');
 
 describe('Testing delete item ', ()=>{
     test('Should delete product and return new Array', ()=>{
