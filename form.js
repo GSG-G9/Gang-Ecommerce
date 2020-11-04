@@ -1,4 +1,3 @@
-
 const productName = document.getElementById('new-name');
 const productPrice = document.getElementById('new-price');
 const productcategory = document.getElementById('new-category');
@@ -8,8 +7,16 @@ const submitBtn = document.getElementById('submit');
 
 
 
-const products = [];
+const products =[];
 
+
+
+
+const addItems = (arr, item) => {
+    const array = [...arr];
+    arr.push(item);
+    return arr;
+};
 
 submitBtn.addEventListener('click', () =>{
     const product = {
@@ -23,12 +30,12 @@ submitBtn.addEventListener('click', () =>{
     if(productName.value == '' ){
         alert('you have to enter name and price to be able to add new product');
     };
-    
-
-    localStorage.setItem("product", JSON.stringify(product));
-    localStorage.setItem("all products", JSON.stringify(addItems(products, product)));
-    
-    console.log( addItems(products, product));
-})
 
 
+
+
+    localStorage.setItem("products", JSON.stringify(addItems(products, product)));
+
+
+    console.log( products);
+});
