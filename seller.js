@@ -4,8 +4,6 @@ const products = localStorage.getItem('allProducts');
 
 
 
-deleteInput.style.display = 'none';
 
 deleteBtn.addEventListener('click',() => {
-    deleteInput.style.display = 'block';
   });
