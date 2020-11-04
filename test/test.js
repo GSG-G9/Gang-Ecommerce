@@ -1,11 +1,12 @@
-const { updateProduct, addItems, deleteItem } = require('../scripts/pure.js');
+const {  updateProduct, addItems, deleteItem} = require('../scripts/pure.js');
 
-describe('Testing delete product items', () => {
-    test('Should deleteProduct and return newArray ', () => {
-        const arr = ['a', 'b', 'c'];
-        const item = 'c';
+
+describe('Testing delete item ', ()=>{
+    test('Should delete product and return new Array', ()=>{
+        const arr = [{productname: 'product1' , price :'120'} , {productname: 'product2' , price :'130'} , {productname: 'aproduct3' , price :'140'} ];
+        const item = {productname: 'aproduct3' , price :'140'};
         const actual = deleteItem(arr, item);
-        const expected = ['a', 'b'];
+        const expected = [{productname: 'product1' , price :'120'} , {productname: 'product2' , price :'130'} ]
         expect(actual).toEqual(expected);
     });
 });

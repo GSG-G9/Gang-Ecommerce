@@ -2,7 +2,7 @@
 
 let deleteItem = (arr, item) => {
     const filteredItems = arr.filter((i) => {
-        return i !== item
+        return i.productname !== item.productname
     })
 
     return filteredItems;
