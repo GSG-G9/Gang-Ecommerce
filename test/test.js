@@ -1,12 +1,13 @@
 const {  updateProduct, addItems, deleteItem} = require('../scripts/pure.js');
 
-describe('Testing delete item form cart', ()=>{
+
+describe('Testing delete item ', ()=>{
     test('Should delete product and return new Array', ()=>{
-        const arr = [{a: 'a' , a2:'a'} , {b: 'b', b2:'b'} , {c: 'c', c2:'c'} ];
-        const item = {c: 'c', c2:'c'};
+        const arr = [{productname: 'product1' , price :'120'} , {productname: 'product2' , price :'130'} , {productname: 'aproduct3' , price :'140'} ];
+        const item = {productname: 'aproduct3' , price :'140'};
         const actual = deleteItem(arr, item);
-        const expected = [{a: 'a', a2:'a'} , {b: 'b', b2:'b'} ]
-        expect(actual).toStrictEqual(expect.objectContaining(expected));
+        const expected = [{productname: 'product1' , price :'120'} , {productname: 'product2' , price :'130'} ]
+        expect(actual).toEqual(expected);
     });
 });
 
