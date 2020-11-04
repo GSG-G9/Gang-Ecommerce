@@ -1,12 +1,5 @@
 'use strict';
 
-let deleteFromCart = (arr, item) =>{
-    const deletecartItem = arr.filter((i) => {
-        return i !== item
-    })
-    return deletecartItem;
-};
-
 let deleteItem = (arr, item) => {
     const filteredItems = arr.filter((i) => {
         return i !== item
@@ -33,4 +26,4 @@ const addItems = (arr, item) => {
 };
 
 
-module.exports = { addItems, updateProduct, deleteItem ,deleteFromCart};
+module.exports = { addItems, updateProduct, deleteItem };
