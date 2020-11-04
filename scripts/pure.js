@@ -28,7 +28,6 @@ const addItems = (arr, item) => {
 const searchByName = (array, name) => {
     const searchResult = [...array];
     const filteredItems = searchResult.filter((i) => {
-
         return i.name === name;
     })
 
