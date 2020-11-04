@@ -2,7 +2,7 @@
 
 let deleteItem = (arr, item) => {
     const filteredItems = arr.filter((i) => {
-        return i !== item
+        return i.productname !== item.productname
     })
 
     return filteredItems;
@@ -25,5 +25,15 @@ const addItems = (arr, item) => {
       
 };
 
+const searchByName = (array, name) => {
+    const searchResult = [...array];
+    const filteredItems = searchResult.filter((i) => {
+        return i.name === name;
+    })
 
-//module.exports = { addItems, updateProduct, deleteItem };
+    return filteredItems;
+
+}
+
+
+module.exports = { addItems, updateProduct, deleteItem, searchByName };

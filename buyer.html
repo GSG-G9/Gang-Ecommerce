@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +8,35 @@
     <link rel="stylesheet" href="css/media.css">
     <title>Gang || Buyer</title>
 </head>
+
 <body>
     <header>
-        <h1>Welcome to Gang Ecommerc</h1>
-        <a href="index.html"><img src="" alt="Gang logo"></a> 
+        <a href="index.html" class="logo"><h1>The Gang</h1></a>
+        <div class="linkshead">
+            <a href="seller.html">I'm a Seller</a> 
+            <a href="buyer.html">I'm a Buyer</a>
+        </div>
     </header>
     <main>
-        <label for="Search">Enter your product name</label>
-        <input class="search"  id="Search" type="search"  name="" value="">
+<<<<<<< HEAD
+        <label>Enter your product name</label>
+        <input id="Search" type="search" name="" value="">
+
+        <input id="button" type="button" name="" value="Search By Name">
+
+
+=======
+        <div class="searchdiv">
+            <label for="Search">Enter your product name</label>
+            <input class="search" id="Search" type="search" name="" value="">
+            <input class="search" id="button" type="button" name="" value="Search By Name">
+        </div>
+>>>>>>> 8d6082f0871c226e16335ced68a6a5a867e97476
         <a href="cart.html"> <button>Cart</button></a>
-        <div class="products" id="products">
-            <div>
-                <img src="" alt="">
-                <p class="product_name"></p>
-                <span class="product_details"></span> 
-                <p class="product-category"></p>
-                <p class="product_price"></p>   
-                <button class="add_to_cart">Add to cart</button>
-            </div>
+        <button id="grid_view">Grid view</button>
+        <button id="list_view">List view</button>
+        <div class="produc__container" id="produc__container">
+
         </div>
 
     </main>
@@ -34,4 +46,5 @@
     <script src="scripts/DOM.js"></script>
     <script src="scripts/pure.js"></script>
 </body>
+
 </html>
