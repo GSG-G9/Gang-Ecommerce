@@ -25,5 +25,16 @@ const addItems = (arr, item) => {
     return newArr;
 };
 
+const searchByName = (array, name) => {
+    const searchResult = [...array];
+    const filteredItems = searchResult.filter((i) => {
 
-module.exports = { addItems, updateProduct, deleteItem };
+        return i.name === name;
+    })
+
+    return filteredItems;
+
+}
+
+
+module.exports = { addItems, updateProduct, deleteItem, searchByName };
