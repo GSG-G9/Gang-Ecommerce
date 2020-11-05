@@ -1,6 +1,7 @@
 const cart = [];
 const producContainer = document.getElementById('produc__container');
-const allProduct = [{ image: "https://via.placeholder.com/300.png/09f/ff", name: "a", details: "100", category: "men", price: 100 }, { image: "https://via.placeholder.com/300.png/09f/ff", name: "a", details: "100", category: "men", price: 100 }, { image: "https://via.placeholder.com/300.png/09f/ff", name: "a", details: "100", category: "men", price: 100 }];
+// const allProduct = [{ image: "https://via.placeholder.com/300.png/09f/ff", name: "a", details: "100", category: "men", price: 100 }, { image: "https://via.placeholder.com/300.png/09f/ff", name: "a", details: "100", category: "men", price: 100 }, { image: "https://via.placeholder.com/300.png/09f/ff", name: "a", details: "100", category: "men", price: 100 }];
+const allProduct = JSON.parse(localStorage.getItem('products'));
 const render = (allProduct) => {
     allProduct.forEach((product) => {
         const div = document.createElement("div");

@@ -2,14 +2,22 @@ const clearCart = document.getElementById('clear__cart');
 
 clearCart.addEventListener("click", () => {
     window.localStorage.removeItem('cart');
+    //render();
+    
+ 
+
 });
 
-// const cart = localStorage.getItem(JSON.parse('cart')) || [];
 
-const cart = [{ image: "https://via.placeholder.com/300.png/09f/ff", name: "khamis", details: "100", category: "men", price: 100 }];
+// /const cart = [{ image: "https://via.placeholder.com/300.png/09f/ff", name: "khamis", details: "100", category: "men", price: 100 }];
+//const cart = localStorage.getItem(JSON.parse(JSON.stringify('cart'))) || [];
 
-const render = () => {
-    cart.forEach((product) => {
+const cart =  JSON.parse(localStorage.getItem('cart'));
+//const cart = localStorage.getItem('cart') || [];
+console.log(cart);
+
+const render = (array) => {
+    array.forEach((product) => {
         const div = document.createElement("div");
         div.classList.add("products");
 
@@ -46,7 +54,15 @@ const render = () => {
 
 }
 
-render();
+if(localStorage.getItem('cart') == null){
+    const empty = document.createElement('p');
+    productName.innerText = "The cart is empty";
+    document.body.appendChild(empty);
+
+}
+else{
+    render(cart);
+}
 
 
 
