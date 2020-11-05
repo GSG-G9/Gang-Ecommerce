@@ -19,6 +19,20 @@ const updateProduct = (name, details, price, img, category) => {
     };
     return productAfterUpdate;
 }
+// try to edit update function
+function updateOneProduct (arr, action){
+    return arr.map((item, index) => {
+        if (index != action.index) {
+            return item;
+        }
+
+        return {
+            ...item,
+            ...action.item
+        };
+    })
+}
+
 
 const addItems = (arr, item) => {
     return [...arr, item];
