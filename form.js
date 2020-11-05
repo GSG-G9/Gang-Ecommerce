@@ -7,35 +7,31 @@ const submitBtn = document.getElementById('submit');
 
 
 
-const products =[];
+const products = [];
 
 
 
 
-const addItems = (arr, item) => {
-    const array = [...arr];
-    arr.push(item);
-    return arr;
+const addItems = (products, product) => {
+    return array = [...products, product];
 };
 
-submitBtn.addEventListener('click', () =>{
+submitBtn.addEventListener('click', () => {
     const product = {
         name: productName.value,
-        price: productPrice.value ,
+        price: productPrice.value,
         category: productcategory.value,
         img_URL: productImg.value,
         details: productDetails.value,
     };
 
-    if(productName.value == '' ){
+    if (productName.value == '') {
         alert('you have to enter name and price to be able to add new product');
     };
-
-
 
 
     localStorage.setItem("products", JSON.stringify(addItems(products, product)));
 
 
-    console.log( products);
+    console.log(products);
 });
