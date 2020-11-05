@@ -22,12 +22,11 @@ const updateProduct = (name, details, price, img, category) => {
 
 const addItems = (arr, item) => {
     return [...arr, item];
-      
+
 };
 
 const searchByName = (array, name) => {
-    const searchResult = [...array];
-    const filteredItems = searchResult.filter((i) => {
+    const filteredItems = array.filter((i) => {
         return i.name === name;
     })
 
